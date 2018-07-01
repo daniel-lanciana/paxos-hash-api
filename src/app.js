@@ -7,16 +7,18 @@ import logger from './logger';
 
 import bodyParser from 'body-parser';
 import helmet from 'helmet';
-import routes from './routes';
+import forceHttps from 'express-force-https';
+import csurf from 'csurf';
 
+import routes from './routes';
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-// Security HTTP headers, best used early in the middleware stack
+// Security (https://expressjs.com/en/advanced/best-practice-security.html)
 app.use(helmet());
-
-app.disable('x-powered-by');
+app.use(forceHttps);
+app.use(csurf);
 
 // View engine setup
 app.set('views', path.join(__dirname, '../views'));
