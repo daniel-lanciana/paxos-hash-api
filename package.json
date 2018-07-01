@@ -1,14 +1,14 @@
 {
-  "name": "express-babel",
+  "name": "heroku-express-babel",
   "version": "1.0.0",
-  "description": "Using latest JavaScript features on the server",
-  "repository": "https://github.com/vmasto/express-babel",
-  "author": "Vassilis Mastorostergios <vmasto@gmail.com>",
+  "description": "Using latest JavaScript features on a Heroku server",
+  "repository": "https://github.com/daniel-lanciana/heroku-express-babel",
+  "author": "Daniel Lanciana <daniel.lanciana@gmail.com>",
   "license": "MIT",
   "main": "dist/index.js",
   "engines": {
-    "node": "~6.9.1",
-    "npm": ">=3.10.0"
+    "node": "^10.5.0",
+    "npm": "^6.1.0"
   },
   "scripts": {
     "prestart": "npm run -s build",
@@ -20,6 +20,7 @@
     "lint": "esw -w src test"
   },
   "keywords": [
+    "heroku",
     "express",
     "babel",
     "boilerplate",
