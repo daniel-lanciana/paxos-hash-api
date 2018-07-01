@@ -1,24 +1,20 @@
 import express from 'express';
 import path from 'path';
+import routes from './routes';
 
 // Morgan for HTTP request logging, Winston for application logging
 import morgan from 'morgan';
 import logger from './logger';
-
-import bodyParser from 'body-parser';
+// Helmet for HTTP security headers, force HTTPS, and CSRF protection
 import helmet from 'helmet';
-import forceHttps from 'express-force-https';
-import csurf from 'csurf';
-
-import routes from './routes';
+// Populate req.body
+import bodyParser from 'body-parser';
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
 // Security (https://expressjs.com/en/advanced/best-practice-security.html)
 app.use(helmet());
-app.use(forceHttps);
-app.use(csurf);
 
 // View engine setup
 app.set('views', path.join(__dirname, '../views'));
