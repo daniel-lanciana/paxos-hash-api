@@ -1,0 +1,2 @@
+touch .slugignore
+echo 'yarn.lock' >> .slugignore
