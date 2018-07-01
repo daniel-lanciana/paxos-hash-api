@@ -21,6 +21,10 @@ Slightly more opinionated and less agnostic version of Vassilis Mastorostergios'
 - NPM dev script clean builds before restarting (so changes take effect)
 - Optional environment variables for server port, minimum log level, and max log size
 
+### Opinionated Features:
+- Yarn instead of NPM
+- Configured for deployment to Heroku
+
 ### Getting Started
 
 ```sh
