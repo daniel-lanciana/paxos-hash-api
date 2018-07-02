@@ -16,7 +16,6 @@ Slightly more opinionated and less agnostic version of Vassilis Mastorostergios'
 
 ### Added Features:
 - Node clustering concurrency (https://devcenter.heroku.com/articles/node-concurrency)
-- Heroku Procfile garbage collection strategy (https://devcenter.heroku.com/articles/node-best-practices)
 - Updated engines and all dependencies (current as of July 1, 2018)
 - Logging with [Winston](https://github.com/winstonjs/winston) (custom format, rotating logs to disk)
 - Security with [Helmet](https://github.com/helmetjs/helmet)
@@ -26,6 +25,7 @@ Slightly more opinionated and less agnostic version of Vassilis Mastorostergios'
 ### Opinionated Features:
 - Yarn instead of NPM
 - Configured for deployment to Heroku
+- Heroku Procfile garbage collection strategy (https://devcenter.heroku.com/articles/node-best-practices)
 
 ### Getting Started
 
