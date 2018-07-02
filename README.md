@@ -1,9 +1,9 @@
 # Heroku Express.js with Babel Boilerplate
 
-[![Code Climate](https://codeclimate.com/github/vmasto/express-babel/badges/gpa.svg)](https://codeclimate.com/github/vmasto/express-babel)
-[![Dependencies Status](https://david-dm.org/vmasto/express-babel/status.svg)](https://david-dm.org/vmasto/express-babel)
-[![Dev Dependencies Status](https://david-dm.org/vmasto/express-babel/dev-status.svg)](https://david-dm.org/vmasto/express-babel)
-[![NSP Status](https://nodesecurity.io/orgs/vmasto/projects/d8089487-4f0e-4f69-abb1-938c6de1e6a7/badge)](https://nodesecurity.io/orgs/vmasto/projects/d8089487-4f0e-4f69-abb1-938c6de1e6a7)
+[![Code Climate](https://codeclimate.com/github/daniel-lanciana/heroku-express-babel/badges/gpa.svg)](https://codeclimate.com/github/daniel-lanciana/heroku-express-babel)
+[![Dependencies Status](https://david-dm.org/daniel-lanciana/heroku-express-babel/status.svg)](https://david-dm.org/daniel-lanciana/heroku-express-babel)
+[![Dev Dependencies Status](https://david-dm.org/daniel-lanciana/heroku-express-babel/dev-status.svg)](https://david-dm.org/daniel-lanciana/heroku-express-babel)
+[![NSP Status](https://nodesecurity.io/orgs/daniel-lanciana/projects/505f74f1-0ff2-4ac0-98e1-441146324228/badge)](https://nodesecurity.io/orgs/daniel-lanciana/projects/505f74f1-0ff2-4ac0-98e1-441146324228)
 
 Slightly more opinionated and less agnostic version of Vassilis Mastorostergios' [Express.js with Babel Boilerplate](https://github.com/vmasto/express-babel).
 
