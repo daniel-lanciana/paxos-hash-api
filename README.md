@@ -15,12 +15,13 @@ Slightly more opinionated and less agnostic version of Vassilis Mastorostergios'
 - Testing with [Jest](https://facebook.github.io/jest/)
 
 ### Added Features:
-- Node clustering concurrency (https://devcenter.heroku.com/articles/node-concurrency) 
+- Node clustering concurrency (https://devcenter.heroku.com/articles/node-concurrency)
+- Heroku Procfile garbage collection strategy (https://devcenter.heroku.com/articles/node-best-practices)
 - Updated engines and all dependencies (current as of July 1, 2018)
 - Logging with [Winston](https://github.com/winstonjs/winston) (custom format, rotating logs to disk)
 - Security with [Helmet](https://github.com/helmetjs/helmet)
 - NPM dev script clean builds before restarting (so changes take effect)
-- Optional environment variables for server port, minimum log level, and max log size
+- Optional environment variables for server port, minimum log level, max log size and web concurrency
 
 ### Opinionated Features:
 - Yarn instead of NPM
