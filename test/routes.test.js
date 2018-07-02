@@ -1,28 +1,65 @@
 import request from 'supertest';
+import async from 'async';
 import app from '../src/app.js';
 
-describe('GET /', () => {
-  it('should render properly', async () => {
-    await request(app).get('/').expect(200);
-  });
-});
+describe('/messages', () => {
+    describe('when requesting all messages', () => {
+        it('should return page not found', async () => {
+            await request(app)
+                .get('/messages')
+                .expect(404);
+        });
+    });
 
-describe('GET /list', () => {
-  it('should render properly with valid parameters', async () => {
-    await request(app)
-      .get('/list')
-      .query({ title: 'List title' })
-      .expect(200);
-  });
+    describe('when submitting with no message', () => {
+        it('should return page not found', async () => {
+            await request(app)
+                .post('/messages')
+                .expect(404);
+        });
+    });
 
-  it('should error without a valid parameter', async () => {
-    await request(app).get('/list').expect(500);
-  });
-});
+    describe('when requesting a message that does not exist', () => {
+        it('should return page not found', async () => {
+            await request(app)
+                .get('/messages/foo')
+                .expect(404);
+        });
+    });
 
-describe('GET /404', () => {
-  it('should return 404 for non-existent URLs', async () => {
-    await request(app).get('/404').expect(404);
-    await request(app).get('/notfound').expect(404);
-  });
+    describe('when posting a message', () => {
+        it('should return the hash digest', async () => {
+            const response = await request(app)
+                .post('/messages')
+                .send({ message: 'foo' })
+                .expect(200)
+                .then(response => {
+                    expect(response.type).toEqual('application/json');
+                    expect(response.body.digest).toEqual('2C26B46B68FFC68FF99B453C1D30413413422D706483BFA0F98A5E886266E7AE');
+                });
+        });
+    });
+
+    it('should return previously hashed messages', function(done) {
+        async.series([
+            function(cb) {
+                request(app)
+                    .post('/messages')
+                    .send({ message: 'foo' })
+                    .expect(200, cb)
+                    .then(response => {
+                        expect(response.type).toEqual('application/json');
+                        expect(response.body.digest).toEqual('2C26B46B68FFC68FF99B453C1D30413413422D706483BFA0F98A5E886266E7AE');
+                    });
+            },
+            function(cb) {
+                request(app)
+                    .get('/messages/2C26B46B68FFC68FF99B453C1D30413413422D706483BFA0F98A5E886266E7AE')
+                    .expect(200, cb)
+                    .then(response => {
+                        expect(response.body.message).toEqual('foo');
+                    });
+            }
+        ], done);
+    });
 });
