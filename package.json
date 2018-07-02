@@ -1,8 +1,8 @@
 {
-  "name": "heroku-express-babel",
+  "name": "paxos-hash-api",
   "version": "1.0.0",
-  "description": "Using latest JavaScript features on a Heroku server",
-  "repository": "https://github.com/daniel-lanciana/heroku-express-babel",
+  "description": "Paxos coding challenge #1",
+  "repository": "https://github.com/daniel-lanciana/paxos-hash-api",
   "author": "Daniel Lanciana <daniel.lanciana@gmail.com>",
   "license": "MIT",
   "main": "dist/app.js",
