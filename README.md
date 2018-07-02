@@ -5,16 +5,17 @@
 [![Dev Dependencies Status](https://david-dm.org/vmasto/express-babel/dev-status.svg)](https://david-dm.org/vmasto/express-babel)
 [![NSP Status](https://nodesecurity.io/orgs/vmasto/projects/d8089487-4f0e-4f69-abb1-938c6de1e6a7/badge)](https://nodesecurity.io/orgs/vmasto/projects/d8089487-4f0e-4f69-abb1-938c6de1e6a7)
 
-Slightly more opinionated and less agnostic version of Vassilis Mastorostergios' [Express.js with Babel Boilerplate](https://github.com/vmasto/express-babel)
+Slightly more opinionated and less agnostic version of Vassilis Mastorostergios' [Express.js with Babel Boilerplate](https://github.com/vmasto/express-babel).
 
 ### Original Features:
-- [Express.js](https://expressjs.com/) as the web framework.
-- ES2017+ support with [Babel](https://babeljs.io/).
-- Automatic polyfill requires based on environment with [babel-preset-env](https://github.com/babel/babel-preset-env).
-- Linting with [ESLint](http://eslint.org/).
-- Testing with [Jest](https://facebook.github.io/jest/).
+- [Express.js](https://expressjs.com/) as the web framework
+- ES2017+ support with [Babel](https://babeljs.io/)
+- Automatic polyfill requires based on environment with [babel-preset-env](https://github.com/babel/babel-preset-env)
+- Linting with [ESLint](http://eslint.org/)
+- Testing with [Jest](https://facebook.github.io/jest/)
 
 ### Added Features:
+- Node clustering concurrency (https://devcenter.heroku.com/articles/node-concurrency) 
 - Updated engines and all dependencies (current as of July 1, 2018)
 - Logging with [Winston](https://github.com/winstonjs/winston) (custom format, rotating logs to disk)
 - Security with [Helmet](https://github.com/helmetjs/helmet)

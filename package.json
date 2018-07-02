@@ -5,15 +5,15 @@
   "repository": "https://github.com/daniel-lanciana/heroku-express-babel",
   "author": "Daniel Lanciana <daniel.lanciana@gmail.com>",
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "dist/app.js",
   "engines": {
     "node": "^10.5.0",
     "npm": "^6.1.0"
   },
   "scripts": {
     "prestart": "npm run -s build",
-    "start": "node dist/index.js",
-    "dev": "npm run build && nodemon src/index.js --exec \"node -r dotenv/config -r babel-register\"",
+    "start": "node dist/app.js",
+    "dev": "npm run build && nodemon src/app.js --exec \"node -r dotenv/config -r babel-register\"",
     "clean": "rimraf dist",
     "build": "npm run clean && mkdir -p dist && babel src -s -D -d dist",
     "test": "jest --watch",
@@ -56,7 +56,8 @@
     "eslint-watch": "^3.1.3",
     "jest": "^21.2.1",
     "nodemon": "^1.12.1",
-    "supertest": "^3.0.0"
+    "supertest": "^3.0.0",
+    "throng": "^4.0.0"
   },
   "babel": {
     "presets": [
