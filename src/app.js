@@ -11,6 +11,7 @@ import helmet from 'helmet';
 import bodyParser from 'body-parser';
 // Clustered Node apps
 //import throng from 'throng';
+const throng = require('throng');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
