@@ -25,7 +25,7 @@ Slightly more opinionated and less agnostic version of Vassilis Mastorostergios'
 ### Opinionated Features:
 - Yarn instead of NPM
 - Configured for deployment to Heroku
-- Heroku Procfile garbage collection strategy (https://devcenter.heroku.com/articles/node-best-practices)
+- Heroku node garbage collection strategy (https://devcenter.heroku.com/articles/node-best-practices), applied to package.json "start" script (instead of the Procfile) for consistency
 
 ### Getting Started
 
