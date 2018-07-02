@@ -12,11 +12,8 @@ import bodyParser from 'body-parser';
 // Clustered Node apps
 import throng from 'throng';
 
-const ENVIRONMENT = process.env.NODE_ENV || 'development';
-const PORT = process.env.PORT || 8080;
-const WORKERS = process.env.WEB_CONCURRENCY || 1;
-
 const app = express();
+const PORT = process.env.PORT || 8080;
 
 // Security (https://expressjs.com/en/advanced/best-practice-security.html)
 app.use(helmet());
@@ -57,6 +54,10 @@ export default app;
 
 
 
+//
+//const ENVIRONMENT = process.env.NODE_ENV || 'development';
+//const PORT = process.env.PORT || 8080;
+//const WORKERS = process.env.WEB_CONCURRENCY || 1;
 //
 ////var app = function() {
 ////  return express()
