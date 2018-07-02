@@ -1,6 +1,5 @@
 # Heroku Express.js with Babel Boilerplate
 
-[![Code Climate](https://codeclimate.com/github/daniel-lanciana/heroku-express-babel/badges/gpa.svg)](https://codeclimate.com/github/daniel-lanciana/heroku-express-babel)
 [![Dependencies Status](https://david-dm.org/daniel-lanciana/heroku-express-babel/status.svg)](https://david-dm.org/daniel-lanciana/heroku-express-babel)
 [![Dev Dependencies Status](https://david-dm.org/daniel-lanciana/heroku-express-babel/dev-status.svg)](https://david-dm.org/daniel-lanciana/heroku-express-babel)
 [![NSP Status](https://nodesecurity.io/orgs/daniel-lanciana/projects/505f74f1-0ff2-4ac0-98e1-441146324228/badge)](https://nodesecurity.io/orgs/daniel-lanciana/projects/505f74f1-0ff2-4ac0-98e1-441146324228)
