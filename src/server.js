@@ -11,5 +11,6 @@ throng({
 });
 
 function start() {
-    var app = require('./app.js')();
+  console.log('Started worker');
+    //var app = require('./app.js')();
 }
