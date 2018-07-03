@@ -1,36 +1,26 @@
 import { Router } from 'express';
+import crypto from 'crypto';
 
 const routes = Router();
+const HASH_ALGORITHM = 'sha256';
+const HASH_OUTPUT_FORMAT = 'hex';
+const foo = {};
 
-/**
- * GET home page
- */
-routes.get('/', (req, res) => {
-  res.render('index', { title: 'Heroku Express Babel' });
+routes.post('/messages', (req, res) => {
+    // SHA256 hex representation is case insensitive, but we always want to return uppercase
+    const digest = crypto.createHash(HASH_ALGORITHM)
+        .update(req.body.message)
+        .digest(HASH_OUTPUT_FORMAT)
+        .toUpperCase();
+
+    foo[digest] = req.body.message;
+
+    res.send({ digest: digest });
 });
 
-/**
- * GET /list
- *
- * This is a sample route demonstrating
- * a simple approach to error handling and testing
- * the global error handler. You most certainly want to
- * create different/better error handlers depending on
- * your use case.
- */
-routes.get('/list', (req, res, next) => {
-  const { title } = req.query;
-
-  if (title == null || title === '') {
-    // You probably want to set the response HTTP status to 400 Bad Request
-    // or 422 Unprocessable Entity instead of the default 500 of
-    // the global error handler (e.g check out https://github.com/kbariotis/throw.js).
-    // This is just for demo purposes.
-    next(new Error('The "title" parameter is required'));
-    return;
-  }
-
-  res.render('index', { title });
+routes.get('/messages/:digest', (req, res) => {
+    const message = foo[req.params.digest];
+    message ? res.send({ message: message }) : res.send(404);
 });
 
 export default routes;

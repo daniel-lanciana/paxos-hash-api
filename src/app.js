@@ -40,7 +40,7 @@ const configExpress = function(app) {
         // Error handler
         .use((err, req, res, next) => { // eslint-disable-line no-unused-vars
             res
-                .status(err.status || 500)
+                .status(err.status || 404)
                 .render('error', {
                     message: err.message
                 });
