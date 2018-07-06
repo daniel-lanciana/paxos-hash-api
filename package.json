@@ -100,6 +100,9 @@
     }
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "setupFiles": [
+      "./test/config.js"
+    ]
   }
 }
