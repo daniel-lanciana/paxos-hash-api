@@ -39,6 +39,7 @@ const configExpress = function(app) {
         })
         // Error handler
         .use((err, req, res, next) => { // eslint-disable-line no-unused-vars
+            logger.error(err.stack);
             res
                 .status(err.status || 404)
                 .render('error', {
