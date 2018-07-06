@@ -18,8 +18,9 @@ routes.post('/messages', (req, res) => {
 });
 
 routes.get('/messages/:digest', (req, res) => {
-    const message = db.get(req.params.digest);
-    message ? res.send({ message: message }) : res.send(404);
+    db.get(req.params.digest).then(function(message) {
+        message ? res.send({ message: message }) : res.send(404)
+    });
 });
 
 export default routes;
