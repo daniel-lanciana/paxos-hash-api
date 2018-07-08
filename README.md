@@ -42,7 +42,7 @@ yarn
 # Build and start local server (server will restart when code changes)
 yarn run dev
 
-# Run tests (powered by Jest, but also support for supertest)
+# Run tests (Jest runner and basic assertions, supertest API testing)
 yarn test
 
 # Run tests with coverage
