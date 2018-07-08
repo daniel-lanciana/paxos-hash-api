@@ -19,7 +19,7 @@ routes.post('/messages', (req, res) => {
 });
 
 routes.get('/messages/:digest', (req, res) => {
-    db.get(req.params.digest)
+    db.get(req.params.digest.toUpperCase())
         .then((message) => {
             message ? res.send({ message: message }) : res.send(404);
         })
