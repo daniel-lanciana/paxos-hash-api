@@ -33,13 +33,13 @@ For simplicity, no:
   - Detailed error responses (e.g. 400 bad request, JSON error messages)
   - Authorization or authentication (i.e. Passport)
   - API versioning (e.g. /v1/messages)
-  - Response cache headers (never expires)
+  - Response cache headers (e.g. never expires)
 
 ### Branches
 
 Different data store implementations with tests. Split into branches for simplicity and non-pollution of dependencies.
 
-#####master
+##### master
 
 - In-memory hash object
 - Promisify get requests to conform to interface
@@ -50,7 +50,7 @@ Different data store implementations with tests. Split into branches for simplic
   - Data storage limited to around 1.5Gb (Node hard memory limit)
   - Data lost on server restart (as no persistence)
 
-#####db-level
+##### db-level
 
 - LevelDB on-disk key-value store
 - [level](https://github.com/Level/level) module that bundles leveldown, levelup and decoding get operations from Buffer to String
@@ -69,7 +69,7 @@ Different data store implementations with tests. Split into branches for simplic
   - No query language
   - Not optimized for clustering (as only one process can access the database at a time)
 
-#####db-redis
+##### db-redis
 
 - Redis in-memory store
 - Promisify get requests to conform to interface
