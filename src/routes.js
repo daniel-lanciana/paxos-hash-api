@@ -1,7 +1,7 @@
 import logger from './logger';
 import { Router } from 'express';
 import crypto from 'crypto';
-import * as db from './db/hash';
+import * as db from './db/level';
 
 const routes = Router();
 const HASH_ALGORITHM = 'sha256';
