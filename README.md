@@ -117,7 +117,7 @@ yarn run dev
 Due to the type of operations (i.e. no querying, simple key/value storage) the best option is a resilient, scalable, supported in-memory data store. Redis is perfect for the job.
 
 Potential bottlenecks:
- - High number of concurrent requests. **Solution**: Scale out horizontally with auto-scaling dynos. Caching responses.
- - High number of stored messages. **Solution**: Scale Redis vertically if costs allow, otherwise bring in-house (e.g. EC2 instances). In-house bring provisioning, monitoring, maintenance, security and scaling overheads.
+ - High number of concurrent requests. **Solution**: Scale out horizontally with auto-scaling Heroku dynos. Caching responses.
+ - High number of stored messages. **Solution**: Scale Redis vertically if costs allow, otherwise bring in-house (e.g. EC2 instances). In-house brings provisioning, monitoring, maintenance, security and scaling overheads.
 
 In any case, swapping implementations requires minimal changes to the codebase.
