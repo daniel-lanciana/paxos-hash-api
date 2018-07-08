@@ -1,5 +1,4 @@
 import level from 'level';
-import { promisify } from 'util';
 
 // Package to use the LevelDB file system key-value data store developed by Google.
 // Includes leveldown (low-level bindings), levelup (high-level abstraction interface) and encoding-down (automatically
