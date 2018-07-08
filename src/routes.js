@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import crypto from 'crypto';
-import * as db from './db/hash';
+import * as db from './db/redis';
 
 const routes = Router();
 const HASH_ALGORITHM = 'sha256';
