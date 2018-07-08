@@ -1,3 +1,4 @@
+import logger from './logger';
 import { Router } from 'express';
 import crypto from 'crypto';
 import * as db from './db/hash';
@@ -18,9 +19,14 @@ routes.post('/messages', (req, res) => {
 });
 
 routes.get('/messages/:digest', (req, res) => {
-    db.get(req.params.digest).then(function(message) {
-        message ? res.send({ message: message }) : res.send(404)
-    });
+    db.get(req.params.digest)
+        .then((message) => {
+            message ? res.send({ message: message }) : res.send(404);
+        })
+        .catch((error) => {
+            logger.error(error.message);
+            res.send(404);
+        });
 });
 
 export default routes;
